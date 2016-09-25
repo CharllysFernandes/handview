@@ -1,21 +1,18 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+  <div>
+    <bible-book-selector></bible-book-selector>
   </div>
 </template>
 
 <script>
+import BibleBookSelector from '../components/bible/BibleBookSelector';
 export default {
-  data() {
-    return {
-      msg: 'Hello Vue!',
-    };
+  components: {
+    BibleBookSelector,
   },
 };
 </script>
 
 <style scoped>
-h1 {
-  color: #42b983;
-}
+
 </style>

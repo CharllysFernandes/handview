@@ -1,37 +1,25 @@
 <template>
   <div id="app">
-    <router-view transition="fade" transition-mode="out-in" class="animated"></router-view>
-
+    <main-menu></main-menu>
+    <div id="container">
+      <div id="content">
+        <p>Language: {{$language}}</p>
+        <p>{{$i18n.message.hello}}, {{$i18n.message.world}}</p>
+        <router-view transition="fade" transition-mode="out-in" class="animated"></router-view>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import MainMenu from './components/menu/MainMenu';
 export default {
+  components: {
+    MainMenu,
+  },
 };
 </script>
 
 <style>
-  html {
-    height: 100%;
-  }
-  
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-  
-  #app {
-    color: #2c3e50;
-    margin-top: -100px;
-    max-width: 600px;
-    font-family: Source Sans Pro, Helvetica, sans-serif;
-    text-align: center;
-  }
-  
-  #app a {
-    color: #42b983;
-    text-decoration: none;
-  }
+
 </style>
