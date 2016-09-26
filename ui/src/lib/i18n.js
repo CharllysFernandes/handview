@@ -40,14 +40,12 @@ const I18n = {
       Vue.prototype.$i18n = {};
       jquery.ajax({
         url: `static/i18n/${language}.json`,
-        async: false,
+        // async: false,
         dataType: 'json',
         type: 'GET',
         success(data) {
           Vue.prototype.$language = language;
           Vue.prototype.$i18n = data;
-
-          console.log(vm.$root);
           update(vm.$root);
           if (callback) {
             callback();

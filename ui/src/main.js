@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
-import I18n from './i18n';
+import I18n from './lib/i18n';
 import App from './App';
 
 Vue.use(VueRouter);

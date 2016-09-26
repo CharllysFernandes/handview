@@ -1,6 +1,4 @@
 {
-  "message": {
-    "hello": "Ola",
-    "world": "Mundo"
-  }
+  "hello": "Ola",
+  "world": "Mundo"
 }

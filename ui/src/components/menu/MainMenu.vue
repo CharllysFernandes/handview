@@ -9,6 +9,9 @@
         <li class="dropdown">
           <router-link to="/songs">Cânticos</router-link>
         </li>
+        <li class="dropdown">
+          <router-link to="/full/show_bible">Show Bible</router-link>
+        </li>
       </ul>
     </div>
   </div>
