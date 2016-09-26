@@ -1,11 +1,12 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
-import I18n from './lib/i18n';
 import App from './App';
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
+
+import I18n from './lib/i18n';
 Vue.use(I18n, {
   baseUrl: 'resources/i18n',
 });
