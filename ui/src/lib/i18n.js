@@ -1,7 +1,4 @@
-/* eslint no-param-reassign: ["error", { "props": false }]*/
-/* eslint no-underscore-dangle: "off"*/
-import jquery from 'jquery';
-
+/* eslint-disable no-underscore-dangle, no-param-reassign */
 /**
  * Updates all the watchers in the Vue instance of a component tree.
  *
@@ -10,7 +7,7 @@ import jquery from 'jquery';
  * updates the children components no matter whether it is inheritable.
  *
  * @param vm
- *    the root of the component tree.
+ * the root of the component tree.
  */
 function update(vm) {
   if (!vm._watchers) {
@@ -32,7 +29,6 @@ function update(vm) {
   }
 }
 
-
 const I18n = {
   install(Vue) {
     Vue.prototype.$language = 'pt-BR';
@@ -41,19 +37,13 @@ const I18n = {
       const vm = this;
       Vue.prototype.$language = '';
       Vue.prototype.$i18n = {};
-      jquery.ajax({
-        url: `static/i18n/${language}.json`,
-        // async: false,
-        dataType: 'json',
-        type: 'GET',
-        success(data) {
-          Vue.prototype.$language = language;
-          Vue.prototype.$i18n = data;
-          update(vm.$root);
-          if (callback) {
-            callback();
-          }
-        },
+      Vue.http.get(`static/i18n/${language}.json`).then((response) => {
+        Vue.prototype.$language = language;
+        Vue.prototype.$i18n = response.body;
+        update(vm.$root);
+        if (callback) {
+          callback();
+        }
       });
     };
   },
