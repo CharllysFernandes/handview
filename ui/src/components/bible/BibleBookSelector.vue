@@ -3,9 +3,11 @@
     <a v-for="book in books" class="btn" @click="selectBook(book)">{{ book}}</a>
   </div>
 </template>
+
 <script>
 import jquery from 'jquery';
 import { mapActions } from 'vuex';
+
 export default {
   data() {
     return {

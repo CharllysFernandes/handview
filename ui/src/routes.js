@@ -1,9 +1,9 @@
-import MainTemplate from './templates/MainTemplate';
-import FullScreenTemplate from './templates/FullScreenTemplate';
+import MainTemplate from './templates/MainTemplate.vue';
+import FullScreenTemplate from './templates/FullScreenTemplate.vue';
 
-import BiblePage from './pages/BiblePage';
-import SongsPage from './pages/SongsPage';
-import ShowBiblePage from './pages/ShowBiblePage';
+import BiblePage from './pages/BiblePage.vue';
+import SongsPage from './pages/SongsPage.vue';
+import ShowBiblePage from './pages/ShowBiblePage.vue';
 
 const routes = [{
   path: '/',

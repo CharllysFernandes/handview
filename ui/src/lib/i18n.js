@@ -18,11 +18,14 @@ function update(vm) {
   }
 
   let i = vm._watchers.length;
+  // eslint-disable-next-line no-plusplus
   while (i--) {
     vm._watchers[i].update(true); // shallow updates
   }
   const children = vm.$children;
   i = children.length;
+
+  // eslint-disable-next-line no-plusplus
   while (i--) {
     const child = children[i];
     update(child);

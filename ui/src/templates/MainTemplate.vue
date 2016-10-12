@@ -10,7 +10,8 @@
 </template>
 
 <script>
-import MainMenu from '../components/menu/MainMenu';
+import MainMenu from '../components/menu/MainMenu.vue';
+
 export default {
   components: {
     MainMenu,

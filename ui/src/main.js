@@ -2,7 +2,9 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 import I18n from './lib/i18n';
-import App from './App';
+import App from './App.vue';
+import router from './router';
+import './external-libraries';
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
@@ -13,9 +15,6 @@ Vue.use(I18n, {
 Vue.http.options.emulateJSON = true;
 // Vue.http.options.root = baseUrl
 // Vue.transition('fade', { enterClass: 'fadeIn', leaveClass: 'fadeOut' })
-
-import router from './router';
-import './external-libraries';
 
 new Vue({
   router,

@@ -5,7 +5,8 @@
 </template>
 
 <script>
-import BibleBookSelector from '../components/bible/BibleBookSelector';
+import BibleBookSelector from '../components/bible/BibleBookSelector.vue';
+
 export default {
   components: {
     BibleBookSelector,
