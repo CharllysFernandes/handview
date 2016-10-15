@@ -15,6 +15,7 @@ module.exports = {
   // add your custom rules here
   'rules': {
     'import/no-unresolved': 0,
+    'import/prefer-default-export': 0,
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
   }
