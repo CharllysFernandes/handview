@@ -5,6 +5,7 @@ module.exports = {
     sourceType: 'module'
   },
   globals: {
+    localStorage: true,
     window: true,
   },
   extends: 'airbnb-base',

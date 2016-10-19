@@ -2,7 +2,7 @@
 import * as types from '../mutation-types';
 
 const state = {
-  book: '',
+  book: JSON.parse(localStorage.getItem('bible.book')) || '',
 };
 
 // mutations
